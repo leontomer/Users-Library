@@ -1,0 +1,41 @@
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.button2 {
+  margin-left: 2%;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.modalText {
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+}
+.buttonsModal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.adduserbutton {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+}
