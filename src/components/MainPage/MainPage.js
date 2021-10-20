@@ -49,13 +49,8 @@ export default function MainPage() {
   };
 
   useEffect(() => {
-    console.log(GlobalState.users);
     setUsers(GlobalState.users);
   }, [GlobalState]);
-
-  useEffect(() => {
-    console.log("hereee", GlobalState.users);
-  }, []);
 
   useEffect(() => {
     if (GlobalState.users.length == 0) {
@@ -65,7 +60,6 @@ export default function MainPage() {
         dispatch(saveUsers(res.data.results));
       })();
     }
-    console.log(users);
   }, []);
 
   const handleClickedDelete = (userMail) => {
@@ -287,9 +281,9 @@ export default function MainPage() {
           </div>{" "}
         </Box>
       </Modal>
-      {users.map((user) => {
+      {users.map((user, index) => {
         return (
-          <Card sx={{ minWidth: 275 }}>
+          <Card sx={{ minWidth: 275 }} key={index}>
             <CardContent>
               <div className="mainDiv">
                 <div>
@@ -308,7 +302,7 @@ export default function MainPage() {
                       id: {user["id"]["value"]}{" "}
                     </Typography>
                   ) : (
-                    <Typography variant="body2"> id: {uuidv4()} </Typography>
+                    <Typography variant="body2"> id: some-random-id</Typography>
                   )}
                   <Typography variant="body2">
                     email: {user["email"]}{" "}
